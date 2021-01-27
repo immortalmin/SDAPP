@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="订单详情"
+        android:textSize="20sp"
+        android:textColor="#353F7A"/>
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/left_arrow"/>
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="编辑"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@drawable/rounded_corners_gray"
+            >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="下单时间:"/>
+
+            <TextView
+                android:id="@+id/place_order_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv1"
+                android:layout_alignBaseline="@+id/tv1"
+                android:textColor="#D87454"
+                android:layout_marginLeft="10dp"
+                android:text="2020-1-1"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv1"
+                android:textColor="#000000"
+                android:text="下单平台:"/>
+
+            <TextView
+                android:id="@+id/order_platform_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv2"
+                android:layout_alignBaseline="@+id/tv2"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="淘宝"/>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv2"
+                android:textColor="#000000"
+                android:text="店铺名称:"/>
+
+            <TextView
+                android:id="@+id/shopname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv3"
+                android:layout_alignBaseline="@+id/tv3"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="恩妮诗"/>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv3"
+                android:textColor="#000000"
+                android:text="放单平台:"/>
+
+            <TextView
+                android:id="@+id/issue_platform_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv4"
+                android:layout_alignBaseline="@+id/tv4"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="放单平台"/>
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv4"
+                android:textColor="#000000"
+                android:text="联系人:"/>
+
+            <TextView
+                android:id="@+id/contact_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv5"
+                android:layout_alignBaseline="@+id/tv5"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="fdsdf"/>
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv5"
+                android:textColor="#000000"
+                android:text="购物平台ID:"/>
+
+            <TextView
+                android:id="@+id/shopID_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv6"
+                android:layout_alignBaseline="@+id/tv6"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="ghgdhdf"/>
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv6"
+                android:textColor="#000000"
+                android:text="实际赠送物品:"/>
+
+            <TextView
+                android:id="@+id/complimentary_items_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv7"
+                android:layout_alignBaseline="@+id/tv7"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="ghgdhdf"/>
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv7"
+                android:textColor="#000000"
+                android:text="性质:"/>
+
+            <TextView
+                android:id="@+id/pattern_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv8"
+                android:layout_alignBaseline="@+id/tv8"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="AA"/>
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv8"
+                android:textColor="#000000"
+                android:text="出图返款要求:"/>
+
+            <TextView
+                android:id="@+id/requirements_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv9"
+                android:layout_alignBaseline="@+id/tv9"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="fgdhshsg"/>
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv9"
+                android:textColor="#000000"
+                android:text="实际垫付金额:"/>
+
+            <TextView
+                android:id="@+id/payment_amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv10"
+                android:layout_alignBaseline="@+id/tv10"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="46"/>
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv10"
+                android:textColor="#000000"
+                android:text="返款方式:"/>
+
+            <TextView
+                android:id="@+id/refund_way_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv11"
+                android:layout_alignBaseline="@+id/tv11"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="sdf"/>
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv11"
+                android:textColor="#000000"
+                android:text="返款日期:"/>
+
+            <TextView
+                android:id="@+id/refund_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv12"
+                android:layout_alignBaseline="@+id/tv12"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="2020-10-2"/>
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv12"
+                android:textColor="#000000"
+                android:text="复购间隔天数:"/>
+
+            <TextView
+                android:id="@+id/repurchase_span_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv13"
+                android:layout_alignBaseline="@+id/tv13"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="2020-10-2"/>
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv13"
+                android:textColor="#000000"
+                android:text="任务状态:"/>
+
+            <TextView
+                android:id="@+id/task_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv14"
+                android:layout_alignBaseline="@+id/tv14"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="进行中"/>
+
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv14"
+                android:textColor="#000000"
+                android:text="是否结算回付账账号:"/>
+
+            <TextView
+                android:id="@+id/is_return_to_payaccount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv15"
+                android:layout_alignBaseline="@+id/tv15"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D87454"
+                android:text="否"/>
+            <Button
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/is_return_to_payaccount_tv"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="删除"/>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/place_order_date"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="下单时间"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/order_platform"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="下单平台"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/shopname"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="店铺名称"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/issue_platform"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="放单平台"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/contact"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="联系人"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/shopID"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="购物平台ID"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/complimentary_items"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="实际赠送物品"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/pattern"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="性质"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/requirements"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="出图返款要求"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/payment_amount"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="实际垫付金额"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/refund_way"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="返款方式"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/refund_date"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="返款日期"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/repurchase_span"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="复购间隔天数"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/task_status"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="任务状态"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/is_return_to_payaccount"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="是否结算回付款账号"/>
+
+            <Button
+                android:id="@+id/commit_btn"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:textSize="17sp"
+                android:layout_marginStart="120dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_corners_green"
+                android:text="保存"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

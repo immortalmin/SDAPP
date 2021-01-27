@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="order_platform">
+        <item>淘宝</item>
+        <item>京东</item>
+        <item>拼多多</item>
+    </string-array>
+</resources>
+
+

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".AddNewOrderActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="添加新订单"
+        android:textSize="20sp"
+        android:textColor="#353F7A"/>
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/left_arrow"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/place_order_date"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="下单时间"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/order_platform_tv"-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/place_order_date"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="下单平台："-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#7E7A7A"-->
+<!--                />-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/order_platform"-->
+<!--                android:background="@drawable/word_input"-->
+<!--                android:layout_width="220dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_below="@+id/place_order_date"-->
+<!--                android:layout_alignBaseline="@+id/order_platform_tv"-->
+<!--                android:layout_toRightOf="@+id/order_platform_tv"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:entries="@array/order_platform"-->
+<!--                android:outlineAmbientShadowColor="#213AC7"-->
+<!--                android:outlineSpotShadowColor="#D30D0D"-->
+<!--                />-->
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/order_platform"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/place_order_date"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="下单平台"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/shopname"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/order_platform"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="店铺名称"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/issue_platform"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/shopname"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="放单平台"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/contact"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/issue_platform"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="联系人"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/shopID"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/contact"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="购物平台ID"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/complimentary_items"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/shopID"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="实际赠送物品"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/pattern"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/complimentary_items"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="性质"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/requirements"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/pattern"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="出图返款要求"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/payment_amount"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/requirements"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="实际垫付金额"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/refund_way"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/payment_amount"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="返款方式"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/refund_date"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/refund_way"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="返款日期"/>
+
+            <com.example.sdapp.MyEditText
+                android:id="@+id/repurchase_span"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/refund_date"
+                app:DisplayStyle="1"
+                app:TextType="0"
+                android:hint="复购间隔天数"/>
+
+            <Button
+                android:id="@+id/commit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/repurchase_span"
+                android:background="@drawable/rounded_corners_green"
+                android:text="提交"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
